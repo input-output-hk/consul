@@ -924,6 +924,9 @@ func makeHTTPFilter(
 			&envoyhttp.HttpFilter{
 				Name: "envoy.router",
 			},
+			&envoyhttp.HttpFilter{
+				Name: "envoy.grpc_web",
+			},
 		},
 		Tracing: &envoyhttp.HttpConnectionManager_Tracing{
 			OperationName: op,
